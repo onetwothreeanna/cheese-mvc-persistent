@@ -10,7 +10,7 @@
 
 
 <ul th:each = "m : ${menu}">
-    <a href="/menu/view/{m.id}"><li th:text = "${m.name}"></li></a>
+    <a th:href="'/menu/view/' + ${m.id}"><li th:text = "${m.name}"></li></a>
 </ul>
 
 <a href="/menu/add">Add Menu</a>

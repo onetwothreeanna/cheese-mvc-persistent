@@ -28,7 +28,7 @@ public class CategoryController {
     public String index(Model model) { //use that model to pass data to the view(template)
 
         model.addAttribute("category", categoryDao.findAll()); //returns an Iterable of all Category Objects managed by categoryDao
-        model.addAttribute("title", "Categories"); //parameters as key value pair the title and the thing
+        model.addAttribute("title", "Categories");
         return "category/index";
     }
 

@@ -54,7 +54,7 @@ public class MenuController {
         }
 
         menuDao.save(menu);
-        return "redirect:menu/view/" + menu.getId();
+        return "redirect:view/" + menu.getId();
     }
 
     // view handler
@@ -84,7 +84,7 @@ public class MenuController {
             model.addAttribute("form", form);
             return "menu/add-item";
         }
-
+        Menu menuObject = form.getMenu();
         int cheeseId = form.getCheeseId();
         int menuId = form.getMenuId();
 

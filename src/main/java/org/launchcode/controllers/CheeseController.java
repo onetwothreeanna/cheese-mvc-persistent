@@ -76,14 +76,14 @@ public class CheeseController {
         return "redirect:";
     }
 
-//    @RequestMapping(value = "cheese/category/{categoryId}", method = RequestMethod.GET)
-//    public String category(Model model, @PathVariable int categoryId){
-//        Category cat = categoryDao.findOne(categoryId);
-//        model.addAttribute("title", cat.getName());
-//        model.addAttribute("cheeses", categoryDao.findAll());
-//
-//        return "index";
-//
-//    }
+    @RequestMapping(value = "category/{categoryId}", method = RequestMethod.GET)
+    public String category(Model model, @PathVariable int categoryId){
+        Category cat = categoryDao.findOne(categoryId);
+        model.addAttribute("title", cat.getName());
+        model.addAttribute("cheeses", cat.getCheeses());
+
+        return "cheese/index";
+
+    }
 
 }
